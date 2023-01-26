@@ -55,7 +55,7 @@
 
 // alert('you are really'+ ' ' + answer);
 
-const name = "Popkin";
+const name = "Popkins";
 
 console.log(alert(`Hello how your ${name}`));
 
