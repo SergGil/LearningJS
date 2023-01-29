@@ -55,10 +55,52 @@
 
 // alert('you are really'+ ' ' + answer);
 
-const name = "Popkins1";
+// const name = "Popkins1";
 
-console.log(alert(`Hello how your ${name}`));
+// console.log(alert(`Hello how your ${name}`));
 
-const age = 20;
+// const age = 20;
 
-let baba = 5;
+// let baba = 5;
+
+/* Задание на урок:
+
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
+
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
+
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
+
+Проверить, чтобы все работало без ошибок в консоли */
+
+const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+};
+
+const lastMovie = prompt("Один из последних просмотренных фильмов?");
+const mark = prompt("На сколько оцените его?");
+
+const lastMovie2 = prompt("Один из последних просмотренных фильмов?");
+const mark2 = prompt("На сколько оцените его?");
+personalMovieDB.movies[lastMovie] = mark;
+personalMovieDB.movies[lastMovie2] = mark2;
+console.log(personalMovieDB);
